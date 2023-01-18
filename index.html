@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    
+</head>
+<body ng-app>
+    <!--{{}} - вирази -->
+    <div ng-init="f=10; s=20">
+        <p>Multiplication: {{f*s}}</p>
+        <p>Sum: <span ng-bind="f+s"></span></p>
+    </div>
+    <div style="margin-top: 10px;" ng-init="name='Name'; lastName='Last Name'">
+        <p>Hello, {{name + " " + lastName}}!</p>
+    </div>
+    <div ng-init="color='purple'">
+    <input style="background-color: {{color}}" ng-model="color" value="{{color}}">
+</div> 
+<div ng-init="grades=[12, 9, 11, 10, 12, 11]">
+    <p>Your total grade: <span ng-bind="grades[3]"></span></p>
+</div>
+<div ng-init="p=0.2; all=103;">
+    <p>Minimal cost of a book: <span ng-bind="p*all | currency"></span></p>
+    </div>
+    <div ng-init="rName='the book of trees'">
+    <p>Random book name: <span ng-bind="rName | uppercase"></span></p>
+    </div>
+    <!-- <div>
+        <p>The oldest book's been published on: {{product.pubdate | date}}</span></p>
+        </div> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="MainController.js"></script>
+</body>
+</html>
